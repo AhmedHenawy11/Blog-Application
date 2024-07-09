@@ -8,6 +8,9 @@ const app = express();
 const PORT = 3000;
 const expressLayout  = expressEjsLayouts;
 
+
+
+app.use(express.static('public'));
 //Templating Enginge
 app.use(expressLayout);
 app.set('layout', './layouts/main');
