@@ -4,11 +4,13 @@ const express = require('express');
 const expressLayout = require('express-ejs-layouts');
 
 
-
+// config
 const app = express();
 const PORT = 3000;
 
 
+//routes
+const indexRoutes = require('./routes/index');
 
 app.use(express.static('public'));
 //Templating Enginge
@@ -17,14 +19,8 @@ app.set('layout', './layouts/main');
 app.set('view engine', 'ejs');
 
 
-
-
-
-
-
-
 //Handling Routes
-app.use('/', require('./server/routes/main'));
+app.use('', indexRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
