@@ -6,7 +6,7 @@ const expressLayout = require('express-ejs-layouts');
 
 // config
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT
 
 
 //routes
