@@ -18,13 +18,12 @@ h3 { font-size: var(--font-size-md); }
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="search"],
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--black);
     font-size: var(--font-size-base);
-    background-color: #FAF5EE;
-    background-image: url("/img/img-noise-361x370.png");
+    background-color: #dad3cb;
+    /* background-image: url("/img/img-noise-361x370.png"); */
     margin: 0;
 }
 .navbar-nav .nav-link {
@@ -65,14 +64,6 @@ body {
   --border-radius: 10px;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  color: var(--black);
-  font-size: var(--font-size-base);
-  background-color: #FAF5EE;
-  background-image: url("/images/img-noise-361x370.png");
-  margin: 0;
-}
 
 a { color: var(--black); }
 h1 { font-size: var(--font-size-xl); }
@@ -110,7 +101,6 @@ textarea {
 
 
 img {
-  width: 60%;
   height: auto;
 }
 

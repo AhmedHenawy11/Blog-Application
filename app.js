@@ -10,12 +10,13 @@ const PORT = process.env.PORT
 
 
 //routes
-const indexRoutes = require('./routes/index');
+const indexRoutes = require('./src/routes/index');
 
 app.use(express.static('public'));
 //Templating Enginge
 app.use(expressLayout);
-app.set('layout', './layouts/main');
+app.set('views', '/mnt/main-partition/Work/Projects/Blog-Application/src/views')
+app.set('layout', 'layouts/main');
 app.set('view engine', 'ejs');
 
 
