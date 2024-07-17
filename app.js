@@ -6,7 +6,8 @@ const expressLayout = require('express-ejs-layouts');
 
 // config
 const app = express();
-const PORT = process.env.PORT
+const PORT = process.env.PORT;
+const connectDB = require('./src/config/db')
 
 
 //routes
@@ -24,5 +25,6 @@ app.set('view engine', 'ejs');
 app.use('', indexRoutes);
 
 app.listen(PORT, () => {
+    connectDB();
     console.log(`Server is running on port ${PORT}`);
 });

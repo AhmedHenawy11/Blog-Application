@@ -23,6 +23,7 @@
     "express-session": "^1.18.0",
     "jsonwebtoken": "^9.0.2",
     "method-override": "^3.0.0",
+    "mongoose": "^8.5.1",
     "mongose": "^0.0.2-security"
   },
   "description": "Building a Blog with Node.js, Express & MongoDB",
