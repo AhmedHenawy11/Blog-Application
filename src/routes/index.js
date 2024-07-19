@@ -10,7 +10,6 @@ router.get('', async (req, res) => {
         title: "Tech Blog",
         description: "Simple Blog created with NodeJs, Express & MongoDb."
       }
-  
       let perPage = 6;
       let page = req.query.page || 1;
   
