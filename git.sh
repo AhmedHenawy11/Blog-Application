@@ -5,7 +5,7 @@ if [ $# -ge 1 ];
 then
         commit_word="$@"
 else
-        commit_word=$(cat /usr/share/dict/words | shuf -n 2)
+        commit_word="upload"
 fi;
 
 # Add all the files in the current directory to the Git staging area
