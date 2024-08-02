@@ -21,8 +21,13 @@ app.set('layout', 'layouts/main');
 app.set('view engine', 'ejs');
 
 
+//Middleware 
+app.use(express.urlencoded({ extended: true }));
+
+
 //Handling Routes
 app.use('', indexRoutes);
+
 
 app.listen(PORT, () => {
     connectDB();

@@ -40,7 +40,37 @@ router.get('/post/:id',async(req, res) => {
 })
 
 
+// search
+router.post('/search',async(req, res) => {
+  try {
+    const locals = {
+      title: "NodeJs Blog",
+      description: "Simple Blog created with NodeJs, Express & MongoDb."
+    }
+    // the id in the requesr
+    let searchTerm = req.body.searchTerm;
+    const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9 ]/g, "");
+    const words = searchNoSpecialChar.split(/\s+/).filter(Boolean); // Split by spaces and remove empty strings
+    const regexPattern = words.map(word => `(?=.*${word})`).join(''); // Create a pattern to match all words in any order
+    const regex = new RegExp(regexPattern, 'i');
+    
+    const data = await Post.find({
+      $or: [
+        { title: { $regex: regex }},
+        { body: { $regex: regex }}
+      ]
+    });
+    res.render("search", {
+      data,
+      locals,
+    });
+    console.log(data);
 
+  } catch (error) {
+    console.error(error);
+  }
+  
+})
 
 
 
