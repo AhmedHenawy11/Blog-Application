@@ -26,7 +26,8 @@ app.use(express.urlencoded({ extended: true }));
 
 
 //Handling Routes
-app.use('', indexRoutes);
+app.use('', require('./src/routes/admin'));
+
 
 
 app.listen(PORT, () => {
